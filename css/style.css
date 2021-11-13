@@ -8,12 +8,30 @@ body {
     flex: 1 1 auto;
 }
 
+
+details {
+    padding: 5px;
+    
+}
+
+details > summary {
+    list-style-image: url("./img/icon-arrow-down.svg");
+}
+
+details[open] > summary {
+    list-style-image: url("./img/icon-arrow-up.png");
+}
+
+summary {
+    padding: 5px;    
+}
+
 hr {
-    width: 50%;
+    width: 91.66%;
 }
 
 .flex-container {
-    margin: 10% auto 10% auto;
+    margin: 20% auto 20% auto;
     display: flex;
     text-align: center;
     flex-flow: column wrap;
