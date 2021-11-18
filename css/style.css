@@ -1,6 +1,79 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 body {
     background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) );
+    background-repeat: no-repeat;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+details {
+    padding: 5px;
+} 
+
+details > summary {
+    list-style-image: url("./img/icon-arrow-down.svg");
+    cursor: pointer;
+}
+
+details[open] > summary {
+    list-style-image: url("./img/icon-arrow-up.png");
+    font-weight: 700; 
+    color: black;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+hr {
+    border: 1px solid hsl(240, 5%, 91%);
+    width: 91.66%;
+}
+
+section {
+    display: grid;
+}
+
+summary {
+    padding: 5px;   
+    
+}
+
+summary:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.img-container {
+    content:url("./img/illustration-woman-online-mobile.svg");
+}
+
+.flex-container {
+    margin: 20% auto 20% auto;
+    padding: 25% 5% 20% 5%;
+    display: flex;
+    text-align: center;
+    flex-flow: column wrap;
+    background-color: white;
+    background-image: url("./img/bg-pattern-mobile.svg");
+    background-position: top;
     background-repeat: no-repeat;
 }
 
@@ -9,39 +82,3 @@ body {
 }
 
 
-details {
-    padding: 5px;
-    
-}
-
-details > summary {
-    list-style-image: url("./img/icon-arrow-down.svg");
-}
-
-details[open] > summary {
-    list-style-image: url("./img/icon-arrow-up.png");
-}
-
-summary {
-    padding: 5px;    
-}
-
-hr {
-    width: 91.66%;
-}
-
-.flex-container {
-    margin: 20% auto 20% auto;
-    display: flex;
-    text-align: center;
-    flex-flow: column wrap;
-    background-color: white;
-    background-image: url("./img/bg-pattern-mobile.svg");
-    background-repeat: no-repeat;
-}
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
