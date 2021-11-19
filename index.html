@@ -18,42 +18,33 @@
     <div class="flex-container">
     <h1>FAQ</h1>
 
-    <details class="flex-row">
-      <summary> How many team members can I invite?</summary>
-        You can invite up to 2 additional users on the Free plan. There is no limit on 
-        team members for the Premium plan.
-    </details>
-    
-    <hr>
+    <button class="accordion" class="flex-row">How many team members can I invite?</button>
+    <div class="panel">
+      <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.</p>
+    </div>
 
-    <details class="flex-row">
-      <summary>What is the maximum file upload size?</summary>
-      No more than 2GB. All files in your account must fit your allotted storage space.
-    </details>
-  
-    <hr>
+    <button class="accordion" class="flex-row">What is the maximum file upload size?</button>
+    <div class="panel">
+      <p>No more than 2GB. All files in your account must fit your allotted storage space.
+      </p>
+    </div>
 
-    <details class="flex-row">
-      <summary>How do I reset my password?</summary>
-      Click “Forgot password” from the login page or “Change password” from your profile page.
-      A reset link will be emailed to you.
-    </details>
+    <button class="accordion" class="flex-row">How do I reset my password?</button>
+    <div class="panel">
+      <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</p>
+    </div>
 
-    <hr>
-  
-    <details class="flex-row">
-      <summary>Can I cancel my subscription?</summary>
-      Yes! Send us a message and we’ll process your request no questions asked.
-    </details>
+    <button class="accordion" class="flex-row">Can I cancel my subscription?</button>
+    <div class="panel">
+      <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+    </div>
 
-    <hr>
-  
-    <details class="flex-row">
-      <summary>Do you provide additional support?</summary>
-      Chat and email support is available 24/7. Phone lines are open during normal business hours.
-    </details>
-
-    <hr>
+    <button class="accordion" class="flex-row">Do you provide additional support?</button>
+    <div class="panel">
+      <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+    </div>
   
     </div>
   </section>
@@ -80,5 +71,26 @@
       });
     }
   }
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+
+var articles = document.getElementsByClassName('panel')
+for (var i = 0; i < articles.length; i ++) {
+    articles[i].parentNode.insertBefore(document.createElement('hr'), articles[i].nextSibling)
+}
+
 </script>
 </html>
